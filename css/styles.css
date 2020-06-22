@@ -264,11 +264,6 @@ p {
 
 .features-list {
   display: flex;
-  justify-content: space-between;
-}
-
-.features-item {
-  width: 270px;
 }
 
 .features-item .icon {
@@ -279,6 +274,14 @@ p {
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
+}
+
+.features-item {
+  margin-right: 30px;
+}
+
+.features-item:nth-last-child(-n + 1) {
+  margin-right: 0;
 }
 
 /* Block */
