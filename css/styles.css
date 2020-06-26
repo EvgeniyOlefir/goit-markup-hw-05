@@ -165,23 +165,10 @@ p {
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-color);
-
-  /* transform: scaleX(0);
-  transition: transform 250ms var(--timing-function); */
 }
 
-.site-nav .link:hover::after,
-.site-nav .link:focus::after {
-  color: var(--accent-color);
-
-  transform: scaleX(1);
-}
-
-.site-nav .link.current {
-  color: var(--accent-color);
-}
-
-/* .site-nav .link.current::after {
+.link::before,
+.link:focus {
   content: '';
 
   position: absolute;
@@ -193,7 +180,24 @@ p {
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-color);
-} */
+  transform: scaleX(0);
+  transition: transform 250ms var(--timing-function);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+}
+
+.link:hover::before {
+  color: var(--accent-color);
+
+  transform: scaleX(1);
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
 
 .auth-nav {
   display: flex;
